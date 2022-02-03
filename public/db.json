@@ -1,0 +1,76 @@
+{
+  "cars": [
+    {
+      "id": 5322,
+      "car_brand": "qqw",
+      "country_of_origin": "daw",
+      "most_popupular_model": "dwa",
+      "average_price_of_cars": "357",
+      "value": 357,
+      "color": "#1cddb7"
+    },
+    {
+      "id": 9916,
+      "car_brand": "dwa",
+      "country_of_origin": "dsad",
+      "most_popupular_model": "qewewe",
+      "average_price_of_cars": "653",
+      "value": 653,
+      "color": "#441d8c"
+    },
+    {
+      "id": 9843,
+      "car_brand": "awdaw",
+      "country_of_origin": "dwasd",
+      "most_popupular_model": "132dwad",
+      "average_price_of_cars": "wad",
+      "value": 100,
+      "color": "#ffdc30"
+    },
+    {
+      "id": 6084,
+      "car_brand": "dwad",
+      "country_of_origin": "asdsd",
+      "most_popupular_model": "wqwe",
+      "average_price_of_cars": "123",
+      "value": 123,
+      "color": "#db8759"
+    },
+    {
+      "id": 8809,
+      "car_brand": "addww",
+      "country_of_origin": "adda",
+      "most_popupular_model": "awdas",
+      "average_price_of_cars": "655",
+      "value": 655,
+      "color": "#b9daf7"
+    },
+    {
+      "id": 750,
+      "car_brand": "wqwe",
+      "country_of_origin": "dsd",
+      "most_popupular_model": "dwawd",
+      "average_price_of_cars": "3211",
+      "value": 3211,
+      "color": "#4d018c"
+    },
+    {
+      "id": 1435,
+      "car_brand": "wee",
+      "country_of_origin": "qq",
+      "most_popupular_model": "qwe",
+      "average_price_of_cars": "764",
+      "value": 764,
+      "color": "#ba3b5b"
+    },
+    {
+      "id": 6304,
+      "car_brand": "sdasasa",
+      "country_of_origin": "qqqqwed",
+      "most_popupular_model": "dwqweq",
+      "average_price_of_cars": "6543",
+      "value": 6543,
+      "color": "#d69628"
+    }
+  ]
+}
