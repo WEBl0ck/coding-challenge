@@ -7,7 +7,7 @@ import { CarData } from "./types/DataTypes";
 export default function App() {
   const [carData, setCarData] = React.useState<any | CarData[]>([]);
 
-  function handleSetCarData(data: any) {
+  function handleSetCarData(data: CarData[]) {
     setCarData(data);
   }
 

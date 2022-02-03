@@ -9,7 +9,7 @@ import React, { useState } from "react";
 
 interface Props {
   data: CarData[] | [];
-  setCarData: (data: CarData) => void;
+  setCarData: (data: CarData[]) => void;
 }
 
 export default function DataTable({ data, setCarData }: Props) {
@@ -29,7 +29,6 @@ export default function DataTable({ data, setCarData }: Props) {
       color: randomColor(),
     };
 
-    console.log(newData);
     if (
       carBrand.length > 0 &&
       countryOfOrigin.length > 0 &&
@@ -44,7 +43,7 @@ export default function DataTable({ data, setCarData }: Props) {
   }
 
   function handleDeleteItem(id: number) {
-    axios.delete(`/cars/${id}`).then(({ data }) => {
+    axios.delete(`/cars/${id}`).then(() => {
       const updatedData = data.filter((item: CarData) => item.id !== id);
       setCarData(updatedData);
     });
