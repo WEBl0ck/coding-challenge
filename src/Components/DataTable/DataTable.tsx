@@ -37,7 +37,6 @@ export default function DataTable({ data, setCarData }: Props) {
     ) {
       axios.post("/cars", newData).then(({ data }) => {
         setCarData(data);
-        console.log(data);
       });
     } else {
       alert("Please fill in the all fields");
@@ -45,7 +44,10 @@ export default function DataTable({ data, setCarData }: Props) {
   }
 
   function handleDeleteItem(id: number) {
-    axios.delete(`/cars/${id}`).then(({ data }) => setCarData(data));
+    axios.delete(`/cars/${id}`).then(({ data }) => {
+      const updatedData = data.filter((item: CarData) => item.id !== id);
+      setCarData(updatedData);
+    });
   }
 
   return (
