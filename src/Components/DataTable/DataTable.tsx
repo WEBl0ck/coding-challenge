@@ -1,11 +1,11 @@
 import axios from "axios";
 import { PieChart } from "react-minimal-pie-chart";
 import randomColor from "randomcolor";
+import React, { useState } from "react";
 
 import "./DataTable.scss";
 
 import { CarData } from "../../types/DataTypes";
-import React, { useState } from "react";
 
 interface Props {
   data: CarData[] | [];
@@ -16,7 +16,7 @@ export default function DataTable({ data, setCarData }: Props) {
   const [carBrand, setCarBrand] = useState("");
   const [countryOfOrigin, setCountryOfOrigin] = useState("");
   const [mostPopularModel, setMostPopularModel] = useState("");
-  const [averagePrice, setAveragePrice] = useState<string>("");
+  const [averagePrice, setAveragePrice] = useState("");
 
   function handleCreateItem() {
     const newData = {
@@ -81,19 +81,31 @@ export default function DataTable({ data, setCarData }: Props) {
           onChange={(e) => setAveragePrice(e.target.value)}
         />
         <button className="create_button" onClick={handleCreateItem}>
-          Create new label
+          CREATE
         </button>
       </form>
 
-      <table>
+      <table className={"table"}>
         <thead>
           <tr>
-            <th data-type="numeric">Id</th>
-            <th data-type="text-short">Card Brand</th>
-            <th data-type="text-short">Country of origin</th>
-            <th data-type="text-short">Most popular model</th>
-            <th data-type="text-short">Average price of cars</th>
-            <th data-type="text-short">Remove</th>
+            <th className="table_field_name" data-type="numeric">
+              Id
+            </th>
+            <th className="table_field_name" data-type="text-short">
+              Card Brand
+            </th>
+            <th className="table_field_name" data-type="text-short">
+              Country of origin
+            </th>
+            <th className="table_field_name" data-type="text-short">
+              Most popular model
+            </th>
+            <th className="table_field_name" data-type="text-short">
+              Average price of cars
+            </th>
+            <th className="table_field_name" data-type="text-short">
+              Remove
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -109,19 +121,20 @@ export default function DataTable({ data, setCarData }: Props) {
                   className="table_delete_button"
                   onClick={() => handleDeleteItem(e.id)}
                 >
-                  Delete
+                  DELETE
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
       <div className="graphics_container">
         <div className="pie_chart">
           <PieChart
             label={({ dataEntry }) => dataEntry.car_brand}
             data={data}
-            labelStyle={{ fontSize: 7 }}
+            labelStyle={{ fontSize: 5 }}
           />
         </div>
         <div className="bar_chart">
